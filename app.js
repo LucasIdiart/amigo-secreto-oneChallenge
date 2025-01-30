@@ -17,4 +17,15 @@ function agregarAmigo() {
 
     amigos.push(nombre);
     nInput.value = "";
+    actualizarLista();
+}
+
+function actualizarLista() {
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+    amigos.forEach(amigo => {
+        let li = document.createElement("li");
+        li.textContent = amigo;
+        lista.appendChild(li);
+    });
 }
