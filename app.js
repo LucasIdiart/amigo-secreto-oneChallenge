@@ -6,3 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".button-draw").addEventListener("click", sortearAmigo);
 });
 
+function agregarAmigo() {
+    let nInput = document.getElementById("amigo");
+    let nombre = nInput.value.trim();
+    
+    if (nombre === "") {
+        alert("Por favor, insertar un nombre.");
+        return;
+    }
+
+    amigos.push(nombre);
+    nInput.value = "";
+}
