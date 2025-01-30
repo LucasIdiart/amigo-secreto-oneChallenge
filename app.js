@@ -29,3 +29,13 @@ function actualizarLista() {
         lista.appendChild(li);
     });
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("No hay amigos en la lista para sortear.");
+        return;
+    }
+
+    let i = Math.floor(Math.random() * amigos.length);
+    document.getElementById("resultado").textContent = "El amigo secreto es: " + amigos[i];
+}
